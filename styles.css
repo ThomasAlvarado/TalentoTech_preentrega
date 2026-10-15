@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*evita que los elementos tengan un margen y padding por defecto, y que el tamaño de los elementos se ajuste al contenido*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
 
 html {
     scroll-behavior: smooth;
 }
+
+/* estilos para los encabezados y parrafos */
 
 h1 {
     font-size: 50px;
@@ -33,6 +43,22 @@ p{
     margin: 15px 0 20px 0;
     color: #222;
 }
+
+body {
+    width:100%;
+}
+
+/* estilos para distintos elementos utilizados en distintas secciones */
+
+.seccion-p1 {
+    padding: 40px 80px;
+}
+
+.seccion-m1 {
+    margin: 40px 0;
+}
+
+/* estilos para el header y la barra de navegacion */
 
 .header {
     display: flex;
@@ -66,8 +92,82 @@ p{
     transition: 0.3s ease;
 }
 
+.barra-navegacion a:hover {
+    color: #15bb7be5;
+    font-weight: 700;
+}
+
+/* estilos para el footer y sus elementos */
+
 footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #f7f0f0;
+    padding: 40px 80px;
+}
+
+footer .contenido {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+
+
+footer .medios-pago img{
+    width: 160px;
+    height: 120px;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+footer .medios-pago {
+    display: flex;
+    gap: 10px;
+}
+
+footer .redes {
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 22px 0 15px 0;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+    .barra-navegacion li {
+        margin: 0 10px;
+    }
+    .barra-navegacion a {
+        font-size: 16px;
+    }
+
+    /*footer*/
+
+    footer {
+        padding: 40px 20px;
+    }
+
+    footer .contenido {
+        width: 100%;
+    }
 }
